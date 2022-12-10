@@ -3,4 +3,3 @@
 ![Picture5](https://user-images.githubusercontent.com/112551307/206838587-5d894902-fd15-48fb-8a9d-23b4aefc32f2.png)
 
 ![SD Card Reader Module - Twins Chip 2-550x550w](https://user-images.githubusercontent.com/112551307/206836018-bcd49fba-9a2f-429b-8bc5-7a155d123916.jpg)
-![61-lsE-Gc2L](https://user-images.githubusercontent.com/112551307/206836024-c055803c-a428-4de5-ad17-ac46660ef70b.jpg)
