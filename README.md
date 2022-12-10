@@ -4,3 +4,4 @@
 # Put the songs in the mp3 folder
 # /MP3/
 ![ezgif com-gif-maker](https://user-images.githubusercontent.com/112551307/206855992-b85bdb00-48f1-45fb-808b-6d9a8f73bbed.gif)
+![ezgif com-gif-maker (1)](https://user-images.githubusercontent.com/112551307/206856221-d880dc4e-6a72-44c7-bc2a-603688385aac.gif)
