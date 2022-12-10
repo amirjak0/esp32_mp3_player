@@ -46,8 +46,6 @@ int color_Arrays_1[] = {DARKGREEN, PINK, GREENYELLOW, ORANGE, WHITE, BLUE, GREEN
 int color_count_1 = 0;
 int color_count_2 = 0;
 
-char Alphabet[] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'}; //a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z
-
 String mp3list_0[200];
 String mp3list_1[200];
 String mp3list_2[200];
@@ -84,13 +82,6 @@ String mp3list_W[200];
 String mp3list_X[200];
 String mp3list_Y[200];
 String mp3list_Z[200];
-
-//String mp3list_full [34][200] = {  (String mp3list_0[200]), (String mp3list_1[200]), (String mp3list_2[200]), (String mp3list_3[200]), (String mp3list_4[200]), (String mp3list_5[200]), (String mp3list_6[200]), (String mp3list_7[200]), (String mp3list_8[200]), (String mp3list_9[200]),
-//                                   (String mp3list_A[200]), (String mp3list_B[200]), (String mp3list_C[200]), (String mp3list_D[200]), (String mp3list_E[200]), (String mp3list_F[200]), (String mp3list_G[200]), (String mp3list_H[200]), (String mp3list_I[200]), (String mp3list_J[200]),
-//                                   (String mp3list_K[200]), (String mp3list_L[200]), (String mp3list_M[200]), (String mp3list_N[200]), (String mp3list_O[200]), (String mp3list_P[200]), (String mp3list_Q[200]), (String mp3list_R[200]), (String mp3list_S[200]), (String mp3list_T[200]),
-//                                   (String mp3list_U[200]), (String mp3list_V[200]), (String mp3list_W[200]), (String mp3list_X[200]), (String mp3list_Y[200]), (String mp3list_Z[200])
-//                                };
-
 
 
 String file_name_list[1200];
@@ -256,9 +247,8 @@ void setup()
   deleteFile(SD, "/hello.txt");
 
 
-  mp3_file_number = get_music_list(SD, "/MP3", 0, file_name_list);//کارت حافظه با مسیر mp3//سطح سفر 0// file_name_list یک رشته آرایه ی  1200 تایی هست
-  //get_music_list(SD, "/MP3", 0, file_name_list);//کارت حافظه با مسیر mp3//سطح سفر 0// file_name_list یک رشته آرایه ی  1200 تایی هست
-  //mp3_file_number=115;
+  mp3_file_number = get_music_list(SD, "/MP3", 0, file_name_list);
+
   Serial.print("Music file count:");   Serial.println(mp3_file_number);
   display.print("Music file count:");   display.println(mp3_file_number);
 
@@ -268,11 +258,6 @@ void setup()
   Serial.println("__readFile__");
   readFile(SD, "/hello.txt");
 
-
-  //  for (int i = 0; i < mp3_file_number; i++)
-  //  {
-  //    Serial.print(file_name_list[i]); Serial.println("فایل بعدی");
-  //  }
 }
 //////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////
@@ -281,7 +266,6 @@ void loop()
   display.setCursor(0, 0);
   display.setTextSize(0);
   open_new_song(file_name_list[playing_number]);
-  // open_new_song(mp3list_1[playing_number]);
   id3 = new AudioFileSourceID3(file);
   id3->RegisterMetadataCB(MDCallback, (void*)"ID3TAG");
   out = new AudioOutputI2S(0, 1, 128); // Output to builtInDAC
@@ -294,7 +278,7 @@ void loop()
     (AudioGeneratorMP3 *)mp3;
     if (mp3->isRunning())
     {
-      //Serial.println(F("mp3: isRunning"));
+
       if (!mp3->loop())
       {
         mp3->stop();
@@ -994,26 +978,6 @@ void readFile(fs::FS & fs, const char * path) {
     char  b = file.read();
     String myString = String(b);
     Serial.print(myString);
-    //  int thisChar2 = myString.toInt();
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //    if (myString.endsWith(".mp3"))
-    //    {
-
-    //      Serial.println("\n");
-    //    }
-    // if (temp.startsWith("/MP3/"+thisChar) && temp.endsWith(".mp3"))
-    //    if (myString.startsWith("/MP3/") && myString.endsWith(".mp3"))
-    //    {
-    //      String mp3list1[d] = myString;
-    //      d++;
-    //      Serial.println(d);
-    //      Serial.println("___");
-    //    }
-
-    //    if (b == '\n') {
-    //      Serial.print(" ");
-    //    }
-    // Serial.print(myString);
   }
   file.close();
 }
