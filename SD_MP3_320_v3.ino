@@ -88,7 +88,7 @@ String mp3list_Z[200];
 String file_name_list[1200];
 int mp3_file_number = 0;
 int playing_number = 0;
-////////اگر آهنک کاور و یا همون عکس داشته باشه طول میکشه تا بخونش////////////////
+///////If the song has an image cover, it will take more time to load the song////////////////
 //////////////////////////////////////////////////////////////////////////////////
 
 int threshold = 40;
