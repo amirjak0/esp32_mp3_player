@@ -1,3 +1,4 @@
+# Thanks to earlephilhower
 https://github.com/earlephilhower/ESP8266Audio
 
 # esp32_mp3_player 
