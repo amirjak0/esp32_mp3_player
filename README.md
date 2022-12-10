@@ -1,6 +1,6 @@
 # Thanks to earlephilhower
- first you need to add this library to your arduino library  
- https://github.com/earlephilhower/ESP8266Audio
+ first you need to add this library  https://github.com/earlephilhower/ESP8266Audio  to your arduino library  
+
 
 # esp32_mp3_player 
 # Test on Arduino Core 1.0.6
